@@ -226,9 +226,10 @@
 
 			$.ajax({
 
-		      type: "POST",
-		      url: "inc/sendEmail.php",
-		      data: $(form).serialize(),
+		      method: "POST",
+		      url: "//formspree.io/dharmil.asawla@hotmail.com",
+		      data: $(this).serialize(),
+					dataType: 'json',
 		      beforeSend: function() {
 
 		      	sLoader.fadeIn();

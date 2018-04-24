@@ -1,5 +1,5 @@
 ﻿<?php
-
+/*
 // Replace this with your own email address
 $siteOwnersEmail = 'dharmil.asawla@hotmail.com';
 
