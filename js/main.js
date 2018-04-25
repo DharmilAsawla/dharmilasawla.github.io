@@ -234,10 +234,11 @@
             var subject - $('#contactSubject')
 
             if (name.val() == "" || email.val() == "" || message.val() == "" || subject.val() == "") {
-							$('#message-warning').html("Something went wrong. Please try again.");
-							 $('#message-warning').fadeIn();
+              $('#message-warning').html("Something went wrong. Please try again.");
+              $('#message-warning').fadeIn();
               return false;
             } else {
+
               var sLoader = $('#submit-loader');
               $.ajax({
                 method: 'POST',
@@ -258,7 +259,7 @@
               $('#message-success').fadeIn();
 
 
-            }
+            }}
           }
         });
 
