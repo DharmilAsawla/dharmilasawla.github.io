@@ -226,7 +226,7 @@
   /*	contact form
   ------------------------------------------------------ */
   //new test (didnt work i think)
-
+/*
     $('#contactForm').submit(function(e) {
       var name = $('#ContactName')
       var email = $('#ContactEmail')
@@ -262,7 +262,7 @@
     });
 
 
-
+*/
 
 
 
