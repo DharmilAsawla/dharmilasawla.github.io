@@ -218,56 +218,56 @@
   	/*---------------------------------------------------- */
 	/*	contact form
 	------------------------------------------------------ */
-//new test
-$('#contactForm').submit(function(e) {
-		 var name = $('#contactName')
-		 var email = $('#contactEmail')
-		 var message = $('#contactMessage')
-
-		 if(name.val() == "" || email.val() == "" || message.val() == "") {
-			 //$('.submit-fail').fadeToggle(400);
-			 return false;
-		 }
-		 else {
-			 $.ajax({
-				 method: 'POST',
-				 url: '//formspree.io/dharmil.asawla@hotmail.com',
-				 data: $('#contactForm').serialize(),
-				 datatype: 'json',
-				 beforeSend: function() {
-
-					 sLoader.fadeIn();
-
-				 },
-				 success: function(msg) {
-
-						 // Message was sent
-						 if (msg == 'OK') {
-							 sLoader.fadeOut();
-								$('#message-warning').hide();
-								$('#contactForm').fadeOut();
-								$('#message-success').fadeIn();
-						 }
-						 // There was an error
-						 else {
-							 sLoader.fadeOut();
-								$('#message-warning').html(msg);
-							 $('#message-warning').fadeIn();
-						 }
-
-				 },
-				 error: function() {
-
-					 sLoader.fadeOut();
-					 $('#message-warning').html("Something went wrong. Please try again.");
-						$('#message-warning').fadeIn();
-
-				 }
-
-			 });
-		 }
-
- });
+//new test (didnt work i think)
+// $('#contactForm').submit(function(e) {
+// 		 var name = $('#contactName')
+// 		 var email = $('#contactEmail')
+// 		 var message = $('#contactMessage')
+//
+// 		 if(name.val() == "" || email.val() == "" || message.val() == "") {
+// 			 //$('.submit-fail').fadeToggle(400);
+// 			 return false;
+// 		 }
+// 		 else {
+// 			 $.ajax({
+// 				 method: 'POST',
+// 				 url: '//formspree.io/dharmil.asawla@hotmail.com',
+// 				 data: $('#contactForm').serialize(),
+// 				 datatype: 'json',
+// 				 beforeSend: function() {
+//
+// 					 sLoader.fadeIn();
+//
+// 				 },
+// 				 success: function(msg) {
+//
+// 						 // Message was sent
+// 						 if (msg == 'OK') {
+// 							 sLoader.fadeOut();
+// 								$('#message-warning').hide();
+// 								$('#contactForm').fadeOut();
+// 								$('#message-success').fadeIn();
+// 						 }
+// 						 // There was an error
+// 						 else {
+// 							 sLoader.fadeOut();
+// 								$('#message-warning').html(msg);
+// 							 $('#message-warning').fadeIn();
+// 						 }
+//
+// 				 },
+// 				 error: function() {
+//
+// 					 sLoader.fadeOut();
+// 					 $('#message-warning').html("Something went wrong. Please try again.");
+// 						$('#message-warning').fadeIn();
+//
+// 				 }
+//
+// 			 });
+// 		 }
+//
+//  });
 
 
 /*
