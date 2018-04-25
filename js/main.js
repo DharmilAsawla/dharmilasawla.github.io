@@ -231,7 +231,7 @@
             var name = $('#ContactName')
             var email = $('#ContactEmail')
             var message = $('#ContactMessage')
-            var subject - $('#contactSubject')
+            var subject = $('#contactSubject')
 
             if (name.val() == "" || email.val() == "" || message.val() == "" || subject.val() == "") {
               $('#message-warning').html("Something went wrong. Please try again.");
@@ -258,12 +258,15 @@
               $('#contactForm').fadeOut();
               $('#message-success').fadeIn();
 
+}
+});
+});
 
-            }}
-          }
-        });
 
-      /*
+
+
+
+      /* Old form thingy
       	/* local validation
       	$('#contactForm').validate({
 
