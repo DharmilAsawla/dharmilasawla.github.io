@@ -220,42 +220,12 @@
 
 
 
- 
+
 
   /*---------------------------------------------------- */
   /*	contact form
   ------------------------------------------------------ */
-  //new test (didnt work i think)
-/*
-	$('#contactForm').submit(function(e) {
-		var name = $('#contactName')
-		var email = $('#ContactEmail')
-		var message = $('#contactMessage')
-
-		if(name.val() == "" || email.val() == "" || message.val() == "") {
-
-			return false;
-		}
-		else {
-			$.ajax({
-				method: 'POST',
-				url: '//formspree.io/dharmil.asawla@hotmail.com',
-				data: $('#contact-form').serialize(),
-				datatype: 'json'
-			});
-			e.preventDefault();
-			$(this).get(0).reset();
-
-		}
-	});
-
-
-
-*/
-
-
-
-
+  
 
   /* Old form thingy
   	/* local validation
