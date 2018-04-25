@@ -227,39 +227,28 @@
   ------------------------------------------------------ */
   //new test (didnt work i think)
 
-    $('#contactForm').submit(function(e) {
-      var name = $('#ContactName')
-      var email = $('#ContactEmail')
-      var message = $('#ContactMessage')
+	$('#contactForm').submit(function(e) {
+		var name = $('#contactName')
+		var email = $('#ContactEmail')
+		var message = $('#contactMessage')
 
-      if (name.val() == "" || email.val() == "" || message.val() == "") {
-        $('#message-warning').html("Something went wrong. Please try again.");
-        $('#message-warning').fadeIn();
-        return false;
-      }
-			else {
+		if(name.val() == "" || email.val() == "" || message.val() == "") {
 
-        var sLoader = $('#submit-loader');
-        $.ajax({
-          method: 'POST',
-          url: '//formspree.io/dharmil.asawla@hotmail.com',
-          data: $('#contactForm').serialize(),
-          datatype: 'json'
-        });
-        e.preventDefault();
-        $(this).get(0).reset();
+			return false;
+		}
+		else {
+			$.ajax({
+				method: 'POST',
+				url: '//formspree.io/dharmil.asawla@hotmail.com',
+				data: $('#contact-form').serialize(),
+				datatype: 'json'
+			});
+			e.preventDefault();
+			$(this).get(0).reset();
+		
+		}
+	});
 
-        sLoader.fadeIn();
-
-        // Message was sent
-
-        sLoader.fadeOut();
-        $('#message-warning').hide();
-        $('#contactForm').fadeOut();
-        $('#message-success').fadeIn();
-
-      }
-    });
 
 
 
